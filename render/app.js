@@ -25,6 +25,7 @@ if (!image) {
 
 // register shapefile plugin
 if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
+mapnik.register_default_fonts();
 
 var map = new mapnik.Map(600, 400);
 
