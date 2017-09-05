@@ -33,23 +33,23 @@ var srs = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100
 
 map.srs= srs;
 
-// 
+//
 // read in input
 //
 noise = require("../noisedata.json");
 // console.log(noise['datasets'][0]['geojson']);
 
-// 
+//
 // calc extents
 //
 // TODO: calculate extents (lax, lay etc. below) - use GDAL?
 
-// 
+//
 // Create background layer
 //
 var bg_layer = new mapnik.Layer("bg_lyr");
 
-bg_layer.datasource = new mapnik.Datasource({ 'type': 'raster', 'file': 'noise_bg.png', 
+bg_layer.datasource = new mapnik.Datasource({ 'type': 'raster', 'file': 'noise_bg.png',
 //'lox': 337500.24015247775, 'loy': 362206.6933502753, 'hix': 337700.24015247775, 'hiy': 362300.6933502753 });
 'lox': 511351.7435144611, 'loy': 220977.96466369674, 'hix': 511688.0605144609, 'hiy': 221314.28166369654});
 bg_layer.srs=srs;
@@ -101,7 +101,8 @@ map.loadSync(stylesheet);
 
 
 //  TODO: zoom to extents only
-map.zoomAll();
+//map.zoomAll();
+map.zoomToBox(511351.7435144611, 220977.96466369674, 511688.0605144609, 221314.28166369654);
 map.renderFileSync(image);
 
 console.log('rendered map to ' + image);
