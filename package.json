@@ -1,0 +1,24 @@
+{
+  "name": "node-mapnik-sample-code",
+  "version": "1.0.0",
+  "description": "node mapnik sandbox",
+  "main": "render/app.js",
+  "dependencies": {
+    "gdal": "^0.9.6",
+    "mapnik": "^3.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octoberclub/node-mapnik-sample-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/octoberclub/node-mapnik-sample-code/issues"
+  },
+  "homepage": "https://github.com/octoberclub/node-mapnik-sample-code#readme"
+}
