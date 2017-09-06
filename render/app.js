@@ -27,7 +27,7 @@ if (!image) {
 if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
 mapnik.register_default_fonts();
 
-var map = new mapnik.Map(600, 400);
+var map = new mapnik.Map(1024, 800);
 
 var srs = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +datum=OSGB36 +units=m +no_defs"
 
@@ -100,9 +100,10 @@ map.add_layer(site_outline);
 map.loadSync(stylesheet);
 
 
+
 //  TODO: zoom to extents only
 //map.zoomAll();
-map.zoomToBox(511351.7435144611, 220977.96466369674, 511688.0605144609, 221314.28166369654);
+map.zoomToBox([511351.7435144611, 220977.96466369674, 511688.0605144609, 221314.28166369654]);
 map.renderFileSync(image);
 
 console.log('rendered map to ' + image);
