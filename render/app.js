@@ -100,7 +100,9 @@ map.add_layer(site_outline);
 map.loadSync(stylesheet);
 
 
-// zoom to extents
+
+//  TODO: zoom to extents only
+//map.zoomAll();
 map.zoomToBox([511351.7435144611, 220977.96466369674, 511688.0605144609, 221314.28166369654]);
 map.renderFileSync(image);
 
